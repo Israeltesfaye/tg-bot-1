@@ -1,8 +1,14 @@
 require("dotenv").config()
-
+const express=require("express")
+app=express()
 const TelegramBot = require('node-telegram-bot-api');
 const token=process.env.BOT_TOKEN;
 
+
+
+app.get('/join',(req,res)=>{
+    res.send("join")
+})
 
 const bot = new TelegramBot(token, {polling: true});
 
@@ -21,6 +27,7 @@ bot.sendMessage(msg.chat.id,"welcome",{
 
 bot.on('message', (msg) => {
 
+//main keywords
 if (msg.text.toString().toLowerCase().indexOf("join group") === 0) {
 bot.sendMessage(msg.chat.id,"join group");
 }
@@ -39,3 +46,10 @@ bot.sendMessage(msg.chat.id,"status");
 
 });
 
+
+
+
+
+app.listen(process.env.PORT || 8000,()=>{
+    console.log("server is runing")
+})
