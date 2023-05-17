@@ -1,0 +1,44 @@
+body{
+  padding:0;
+  margin:0;
+  background-image:url('/PicsArt_05-13-03.29.24.jpg' );
+  background-size:cover;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height:50%;
+  width:70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius:20px;
+  background-color:white;
+  
+}
+.container .question{
+  height:30%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  /*background-color:rgb(81,125,162) ;*/
+  background-color:white;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+.container .answers{
+ height:50%;
+ width:100%;
+ }
+.container .answers .answer{
+  height:30%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  justify-items:center;
+  margin:5% 5% 5% 0;
+  padding-top:2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius:10px;
+}
